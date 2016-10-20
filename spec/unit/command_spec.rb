@@ -8,8 +8,8 @@ describe Command do
   let(:robot) { instance_double(Robot) }
 
   describe "#execute" do
-    it "raises a exeception so subclasses must implement method" do
-      expect{ command.execute }.to raise_error(Command::NotImplementedError)
+    it "raises exception" do
+      expect{ command.execute }.to raise_error(NotImplementedError)
     end
   end
 end

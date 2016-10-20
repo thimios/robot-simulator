@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 describe RobotShell do
+  let(:console) { subject.console }
+
   def run(command)
+    console.processCommand(command)
   end
 
   def expect_report_output(output)

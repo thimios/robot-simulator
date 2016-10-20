@@ -1,6 +1,12 @@
+require 'robot'
+require 'table'
 require 'highline'
 require 'cli-console'
+require 'pry'
 
+Dir[File.join(File.dirname(__FILE__), "commands/*.rb")].each do |file|
+  require file
+end
 
 class RobotShell
   extend CLI::Task
@@ -50,12 +56,16 @@ class RobotShell
   private
 
   def execute_command(command, params)
+    params = preprocess_params(params)
+    command.new(table: table, robot: robot, arguments: params).execute
   end
 
   def table
+    @table ||= Table.new
   end
 
   def robot
+    @robot ||= Robot.new
   end
 
   def preprocess_params(params)

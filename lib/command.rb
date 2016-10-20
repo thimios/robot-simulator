@@ -1,5 +1,4 @@
 class Command
-
   def initialize(table:, robot:, arguments: [])
     @table = table
     @robot = robot
