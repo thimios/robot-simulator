@@ -7,6 +7,16 @@ The application is a simulation of a toy robot moving on a square tabletop, of d
 
 ## Usage
 
+To start the application, call
+
+    $ ./bin/toy-robot
+    
+Type `help` to get a summary of available commands. Type `help <command>` to get help on a specific command. Type `exit` or `quit` to quit the toy-robot console. 
+
+The console also supports history and recursive history search (<ctrl> + r).
+
+Although the specifications mention only capitalized commands, the application also accepts commands in lowercase.
+
 The application can read in commands of the following form:
 
     PLACE 2,3,WEST
