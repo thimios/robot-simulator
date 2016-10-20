@@ -1,8 +1,7 @@
 require 'spec_helper'
 
-describe RobotSimulator do
-  
-  def run(command)  
+describe RobotShell do
+  def run(command)
   end
 
   def expect_report_output(output)
